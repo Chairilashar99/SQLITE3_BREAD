@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tambah Data</title>
+
+    <script>
+        function Previous() {
+            window.history.back()
+        }
+    </script>
+    <style>
+        h1 {
+            color: black;
+            text-align: center;
+            text-decoration-color: black;
+        }
+        * {
+            box-sizing: border-box;
+        }
+        
+        input[type=text],[type=number], [type=date],
+        select {
+            width: 100%;
+            padding: 12px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            resize: vertical;
+        }
+        label {
+            padding: 12px 12px 12px 0;
+            display: inline-block;
+        }
+        input[type=submit] {
+            background-color: #000000;
+            border: none;
+            border-radius: 10px;
+            color: white;
+            padding: 15px 32px;
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+            margin: 4px 2px;
+            cursor: pointer;
+        }
+        input[type=submit]:hover {
+            background-color: #ca0909;
+        }
+        input[type=button] {
+            background-color: #000000;
+            border: none;
+            border-radius: 10px;
+            color: white;
+            padding: 15px 32px;
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+            margin: 4px 2px;
+            cursor: pointer;
+        }
+        input[type=button]:hover {
+            background-color: #ca0909;
+        }
+        .container {
+            border-radius: 20px;
+            background-color: #ffffff;
+            backdrop-filter: blur(5px);
+            -webkit-backdrop-filter: blur(5px);
+            border: 10px solid rgba(0, 0, 0, 0.3);
+            padding: 50px;
+            float: inherit
+        }
+        .col-25 {
+            float: left;
+            width: 25%;
+            margin-top: 6px;
+        }
+        .col-75 {
+            float: left;
+            width: 75%;
+            margin-top: 6px;
+        }
+        .row:after {
+            content: "";
+            display: table;
+            clear: both;
+        }
+        @media screen and (max-width: 600px) {
+            .col-25,
+            .col-75,
+            input[type=submit] {
+                width: 100%;
+                margin-top: 0;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Tambah Data</h1>
+    <div class="container">
+        <form action="" method="post">
+            <div class="row">
+                <div class="col-25">
+                    <label for="Strings">String</label>
+                </div>
+                <div class="col-75">
+                    <input type="text" id="Strings" name="String" placeholder="Masukkan String">
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-25">
+                    <label for="Integers">Integer</label>
+
+                </div>
+                <div class="col-75">
+                    <input type="number" id="Integers" name="Integer" placeholder="Masukkan angka">
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-25">
+                    <label for="Floats">Float</label>
+                </div>
+                <div class="col-75">
+                    <input type="number" step=0.01 id="Floats" name="Float" placeholder="Masukkan nilai decimal">
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-25">
+                    <label for="Dates">Date</label>
+                </div>
+
+                <div class="col-75">
+                    <input type="date" id="Dates" name="Date" placeholder="Masukkan tanggal">
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-25">
+                    <label for="Booleans">Boolean</label>
+                </div>
+
+                <div class="col-75">
+                    <select name="Boolean" id="Booleans">
+                        <option selected disabled hidden>Choose the boolean..</option>
+                        <option value="True"> True</option>
+                        <option value="False"> False</option>
+                    </select>
+                </div>
+            </div>
+            <br>
+            <input type="submit" value="Save">
+            <input type="button"
+            value="Back"
+            onclick="Previous()">
+        </form>
+    </div>
+</body>
+
+</html>
